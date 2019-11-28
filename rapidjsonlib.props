@@ -3,13 +3,17 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <rapidjson-path>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</rapidjson-path>
+    <rapidjson-install-path>$(rapidjson-path)out\install\$(Platform)-$(Configuration)\</rapidjson-install-path>
   </PropertyGroup>
   <PropertyGroup>
-    <IncludePath>$(rapidjson-path)include;$(IncludePath)</IncludePath>
+    <IncludePath>$(rapidjson-install-path)include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <BuildMacro Include="rapidjson-path">
       <Value>$(rapidjson-path)</Value>
+    </BuildMacro>    
+    <BuildMacro Include="rapidjson-install-path">
+      <Value>$(rapidjson-install-path)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

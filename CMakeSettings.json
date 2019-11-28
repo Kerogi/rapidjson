@@ -37,6 +37,44 @@
                     "type": "BOOL"
                 }
             ]
+        },
+        {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "configurationType": "Release",
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "-v",
+            "ctestCommandArgs": "",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "variables": [
+                {
+                    "name": "BUILD_TESTING",
+                    "value": "False",
+                    "type": "BOOL"
+                },
+                {
+                    "name": "RAPIDJSON_BUILD_DOC",
+                    "value": "False",
+                    "type": "BOOL"
+                },
+                {
+                    "name": "RAPIDJSON_BUILD_EXAMPLES",
+                    "value": "False",
+                    "type": "BOOL"
+                },
+                {
+                    "name": "RAPIDJSON_BUILD_TESTS",
+                    "value": "False",
+                    "type": "BOOL"
+                },
+                {
+                    "name": "RAPIDJSON_HAS_STDSTRING",
+                    "value": "True",
+                    "type": "BOOL"
+                }
+            ]
         }
     ]
 }
